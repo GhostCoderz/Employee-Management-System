@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Management System</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io1/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io1/site.webmanifest">
+    </head>
+<body>
+
+    <!-- Navigation Div -->
+	<div required id="navigation">
+		<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand fw-bold ms-2" href="index.html">
+					<img src="assets/image/logo3.png" alt="" width="40"
+						height="35" class="d-inline-block align-text-top me-1">
+					<span class="">Employee Management System</span></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" required id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link ms-1 me-1" aria-current="page" href="index.html">Home</a>
+						<a class="nav-link ms-1 me-1" href="#aboutUs">About Us</a>
+						<a class="nav-link ms-1 me-3" href="contactUs.html">Contact Us</a>
+						<a class="btn btn-primary me-3 px-4" href="login.jsp"> Login </a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- End of Navigation Div -->
+
+    <!-- About Us Form Div -->
+    <div class="container pt-4">
+        <div class="row align-self-center mt-5 mb-3 required id="login">
+          <h1 class="text-center pb-2">About us</h1>
+          <hr>
+        </div>
+        <p class="tabDiv mb-6 ms-5 me-5">
+			<span class="tab"></span>
+			In this world of growing technologies everything has been
+			computerized. With large number of work opportunities the Human
+			workforce has increased. Thus there is a need of a system which can handle
+			the data of such a large number of Employees in an organization. This
+			project simplifies the task of maintain records because of its user friendly
+			nature.
+			<br><br>
+			The "EMPLOYEE MANAGEMENT SYSTEM" has been developed to override the
+			problems prevailing in the practicing manual system. This software is
+			supported to eliminate and in some cases reduce the hardships faced by this
+			existing system. Moreover this system is designed for the particular need of
+			the company to carry out operations in a smooth and effective manner.
+			<br><br>
+			The application is reduced as much as possible to avoid errors while entering
+			the data. It also provides error message while entering invalid data. No
+			formal knowledge is needed for the user to use this system. Thus by this all
+			it proves it is user-friendly.
+			This project will allow admin to add new employees after proper
+			authentication. Admin can also add new departments and posts. It can
+			allocate employees to different departments at different posts. Database
+			should store all personal details of employees such as date of birth full name
+			etc. and his educational background, work experience, skill sets, current and
+			past projects in different tables with proper relations.
+			<br><br>
+			This system enables employees to perform their own profile. It enables the
+			automation of work flow notifications and leave request. Work flow
+			notification from administrator are stored in the backend and notified to
+			employee, once employee log in to the system. Leave request made by the
+			employee is placed for administrator approval, the administrator module
+			checks up with the leave availability and approves or rejects the request.
+			<br><br>
+		</p>
+    </div>
+    <!-- End of About Us Form Div -->
+
+    <!-- Footer Div -->
+	<div required id="footer" class="bg-dark text-white">
+		<div class="container p-3 pt-4">
+			<div class="row">
+				<div class="col-4 pb-3 ps-4">
+					302, Premiere Street,<br>
+					New York City, <br>
+                    New York - 10001 <br>
+					+123 123456789 <br>
+				</div>
+				<div class="col-3 border-start ms-3 ps-4">
+					<ul class="footerLink">
+						<li><a class="nav-link link-light p-0 pt-1" href="index.html">Home</a></li>
+						<li><a class="nav-link link-light p-0" href="contactUs.html">Contact Us</a></li>
+						<li><a class="nav-link link-light p-0" href="aboutUs.html">About Us</a></li>
+					</ul>
+				</div>
+				<div class="col-4 p-4 border-start ms-4 ps-4">
+					<p class="ps-4 footerLink">
+                        Employee Management System, <br>
+                        Easy to work!
+                    </p>
+				</div>
+				<div class="col-12 pb-1 pt-3">
+					<div class="text-center">
+						&copy; Copyright of EMP System Ltd.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of Footer Div -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+</body>
+</html>
