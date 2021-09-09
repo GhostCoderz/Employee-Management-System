@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller()
 @RequestMapping("/admin")
 public class AdminController {
+	
+	static String jspPath="/WEB-INF/jsp/";
 
 	@RequestMapping("")
     public String home() {
