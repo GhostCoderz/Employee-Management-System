@@ -1,26 +1,22 @@
 package com.ghostcoderz.ems.dao;
 
 import com.ghostcoderz.ems.entity.Employee;
+import com.ghostcoderz.ems.exceptions.EmployeeNotFoundException;
+import com.ghostcoderz.ems.repositories.EmpRepo;
 
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class EmployeeDAO 
 {
 	
-	@SuppressWarnings("unchecked")
-	public List<Employee> getAllEmployee()
-	{
-		List<Employee> empList=null;
-		
-		try
-		{
-			return empList;
-		}
-		catch (Exception e) 
-		{
-			return null;
-		}
-		
+	@Autowired
+	private EmpRepo empRepo;
+	
+	
+	public List<Employee> getAllEmployee(){
+		return this.empRepo.findAll();
 	}
 	
 	public Employee getEmployeeById(int id)
@@ -46,7 +42,7 @@ public class EmployeeDAO
 		
 		try
 		{
-			return e;
+			return this.empRepo.findByEmail(email);
 		}
 		catch (Exception ex) 
 		{
@@ -55,19 +51,9 @@ public class EmployeeDAO
 		
 	}
 	
-	public boolean insertEmployee(Employee e)
-	{
-		
-		try
-		{
+	public boolean insertEmployee(Employee emp) {
+			this.empRepo.save(emp);
 			return true;
-		}
-		catch (Exception ex) 
-		{
-			ex.printStackTrace();
-			return false;
-		}
-		
 	}
 	
 	public boolean updateEmployee(Employee e)

@@ -12,7 +12,7 @@ public class EmployeeController {
 	@RequestMapping("")
     public String home() {
 		System.out.println("Employee home is called");
-        return MainController.jspPath+"index.jsp";
+        return HomeController.jspPath+"index.jsp";
     }
 
 }

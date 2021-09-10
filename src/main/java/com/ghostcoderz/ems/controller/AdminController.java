@@ -12,7 +12,7 @@ public class AdminController {
 	@RequestMapping("")
     public String home() {
 		System.out.println("Admin home is called");
-        return MainController.jspPath+"index.jsp";
+        return HomeController.jspPath+"index.jsp";
     }
 
 }

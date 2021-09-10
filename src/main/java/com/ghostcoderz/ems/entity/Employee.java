@@ -21,7 +21,7 @@ public class Employee
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String salutation;
-	private String empName;
+	private String name;
 	private String status;
 	private String gender;
 	@OneToMany(cascade=CascadeType.ALL,fetch = FetchType.EAGER)
@@ -37,10 +37,10 @@ public class Employee
 	
 	public Employee() {}
 
-	public Employee(String salutation, String empName, String status, String gender, List<Salary> salary, Date dob,
+	public Employee(String salutation, String name, String status, String gender, List<Salary> salary, Date dob,
 			String email, long empNum, String dept, List<Leave> leave, Address addr) {
 		this.salutation = salutation;
-		this.empName = empName;
+		this.name = name;
 		this.status = status;
 		this.gender = gender;
 		this.salary = salary;
@@ -54,11 +54,11 @@ public class Employee
 
 
 
-	public Employee(int id, String salutation, String empName, String status, String gender, List<Salary> salary, Date dob,
+	public Employee(int id, String salutation, String name, String status, String gender, List<Salary> salary, Date dob,
 			String email, long empNum, String dept, List<Leave> leave, Address addr) {
 		this.id = id;
 		this.salutation = salutation;
-		this.empName = empName;
+		this.name = name;
 		this.status = status;
 		this.gender = gender;
 		this.salary = salary;
@@ -84,11 +84,11 @@ public class Employee
 
 
 
-	public Employee(int id, String salutation, String empName, String status, String gender, List<Salary> salary,
+	public Employee(int id, String salutation, String name, String status, String gender, List<Salary> salary,
 			Date dob, String email, long empNum, String dept, Address addr) {
 		this.id = id;
 		this.salutation = salutation;
-		this.empName = empName;
+		this.name = name;
 		this.status = status;
 		this.gender = gender;
 		this.salary = salary;
@@ -99,10 +99,10 @@ public class Employee
 		this.addr = addr;
 	}
 
-	public Employee(String salutation, String empName, String status, String gender, List<Salary> salary, Date dob,
+	public Employee(String salutation, String name, String status, String gender, List<Salary> salary, Date dob,
 			String email, long empNum, String dept, Address addr) {
 		this.salutation = salutation;
-		this.empName = empName;
+		this.name = name;
 		this.status = status;
 		this.gender = gender;
 		this.salary = salary;
@@ -113,11 +113,11 @@ public class Employee
 		this.addr = addr;
 	}
 
-	public Employee(int id,String salutation, String empName, String status, String gender, Date dob, String email,
+	public Employee(int id,String salutation, String name, String status, String gender, Date dob, String email,
 			long empNum, String dept, Address addr) {
 		this.id=id;
 		this.salutation = salutation;
-		this.empName = empName;
+		this.name = name;
 		this.status = status;
 		this.gender = gender;
 		this.dob = dob;
@@ -127,10 +127,10 @@ public class Employee
 		this.addr = addr;
 	}
 
-	public Employee(String salutation, String empName, String status, String gender, Date dob, String email,
+	public Employee(String salutation, String name, String status, String gender, Date dob, String email,
 			long empNum, String dept, Address addr) {
 		this.salutation = salutation;
-		this.empName = empName;
+		this.name = name;
 		this.status = status;
 		this.gender = gender;
 		this.dob = dob;
@@ -156,12 +156,12 @@ public class Employee
 		this.salutation = salutation;
 	}
 
-	public String getEmpName() {
-		return empName;
+	public String getName() {
+		return name;
 	}
 
-	public void setEmpName(String empName) {
-		this.empName = empName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getStatus() {
@@ -230,7 +230,7 @@ public class Employee
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", salutation=" + salutation + ", empName=" + empName + ", status=" + status
+		return "Employee [id=" + id + ", salutation=" + salutation + ", name=" + name + ", status=" + status
 				+ ", gender=" + gender + ", salary=" + salary.toString() + ", dob=" + dob + ", email=" + email + ", empNum="
 				+ empNum + ", dept=" + dept + ", leave=" + leave + ", addr=" + addr + "]";
 	}

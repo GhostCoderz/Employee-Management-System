@@ -23,22 +23,7 @@
 
 <body>
 
-    <%
-	
-		Employee emp=null;
-	
-		//Checking for null values
-		if(session.getAttribute("userObj")==null)
-		{
-			response.sendRedirect("/login");
-		}
-		else
-		{
-			emp=(Employee) session.getAttribute("userObj");
-			String str[]=emp.getEmpName().split(" ");
-			String firstName=str[0];
-	
-	%>
+    
 
     <!-- Navigation Div -->
 	<div required id="navigation">
@@ -57,20 +42,14 @@
 					<div class="navbar-nav">
 						<a class="nav-link ms-1 me-1" aria-current="page" href="/home">Home</a>
 						<a class="nav-link ms-1 me-3" href="/contactUs">Contact Us</a>
-						<a class="btn btn-primary me-3" href="Dashboard"> Hello, <%= firstName %> </a>
-						<a class="btn btn-primary me-3" href="Logout"> <i class="fas fa-sign-out-alt"></i> Logout </a>
+						<a class="btn btn-primary me-3" href="/dashboard"> Hello, EmployeeName </a>
+						<a class="btn btn-primary me-3" href="/home"> <i class="fas fa-sign-out-alt"></i> Logout </a>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</div>
 	<!-- End of Navigation Div -->
-	
-	<%
-	
-		}
-		
-	%>
 
     <!-- AdminDash div -->
     <div class="adminDash">

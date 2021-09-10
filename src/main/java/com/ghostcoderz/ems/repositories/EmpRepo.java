@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmpRepo extends JpaRepository<Employee, Integer> {
 	
-//	@Query("update Employee e set e.salary = :salList WHERE e.empId = :empId")
-//    public void setCustomerName(@Param("salary") List<Salary> salList, @Param("empId") int empId);
+	public Employee findByEmail(String email);
 
 }

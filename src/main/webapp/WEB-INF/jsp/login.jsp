@@ -43,7 +43,7 @@
               <div class="col-lg-7 px-5 pt-5">
                   <h1 class="fw-bold py-3">Hi, There</h1>
                   <h3 class="py-3">Login</h3>
-                  <form action="Login" method="POST">
+                  <form action="/dashboard" method="POST">
                       <div class="form-row">
                           <div class="col-lg-8">
                               <input type="number" placeholder="Employee Id" name="id" class="form-control my-3 p-3" required id="id">
