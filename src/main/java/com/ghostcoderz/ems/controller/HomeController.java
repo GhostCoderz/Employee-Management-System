@@ -1,21 +1,15 @@
 package com.ghostcoderz.ems.controller;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import com.ghostcoderz.ems.entity.Employee;
 import com.ghostcoderz.ems.entity.Salary;
 import com.ghostcoderz.ems.repositories.EmpRepo;
 import com.ghostcoderz.ems.services.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -35,7 +29,12 @@ public class HomeController {
     }
     
     @RequestMapping("/login")
-    public String login(@RequestParam(name = "id") int id, @RequestParam(name="password") String pass) {
+    public String login() {
+    	return jspPath+"login.jsp";
+    }
+    
+    @RequestMapping(value="/login", method= RequestMethod.POST)
+    public String AuthenticateUser(@RequestParam(name = "id") int id, @RequestParam(name="password") String pass) {
     	EmployeeService empService=new EmployeeService();
     	empService.authenticateUser(id, pass);
     	return jspPath+"login.jsp";

@@ -59,7 +59,7 @@
 					{
 						emp=(Employee) session.getAttribute("userObj");
 				%>
-						<a class="btn btn-primary me-3" href="Dashboard"> Hi, <%= emp.getEmpName() %> </a>
+						<a class="btn btn-primary me-3" href="Dashboard"> Hi, Employee </a>
 						<a class="btn btn-primary me-3" href="Logout"> <i class="fas fa-sign-out-alt"></i> Logout </a>
 				<%
 					}

@@ -1,9 +1,9 @@
 package com.ghostcoderz.ems.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import com.ghostcoderz.ems.entity.User;
 import com.ghostcoderz.ems.exceptions.EmployeeNotFoundException;
 import com.ghostcoderz.ems.repositories.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserDAO 
 {
@@ -42,7 +42,7 @@ public class UserDAO
 		
 		HashingDAO hdao=new HashingDAO();
 		String hashedPass=hdao.hashPass(pass);
-		this.userRepo.getUser(id, hashedPass);
+		//this.userRepo.getUser(id, hashedPass);
 		
 	}
 
