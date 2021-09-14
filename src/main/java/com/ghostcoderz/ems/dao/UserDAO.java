@@ -1,6 +1,5 @@
 package com.ghostcoderz.ems.dao;
 
-import com.ghostcoderz.ems.entity.USER_ROLE;
 import com.ghostcoderz.ems.entity.User;
 import com.ghostcoderz.ems.exceptions.EmployeeNotFoundException;
 import com.ghostcoderz.ems.repositories.UserRepo;
@@ -39,7 +38,7 @@ public class UserDAO
 		
 	}
 
-	public void getUser(int id, String pass, USER_ROLE role) {
+	public void checkValidUser(int id, String pass) {
 		
 		HashingDAO hdao=new HashingDAO();
 		String hashedPass=hdao.hashPass(pass);
