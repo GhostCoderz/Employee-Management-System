@@ -10,12 +10,14 @@ public class User
 	@Id
 	private int id;
 	private String pass;
+	private USER_ROLE role;
 	
 	public User() {}
 
-	public User(int id, String pass) {
+	public User(int id, String pass, USER_ROLE role) {
 		this.id = id;
 		this.pass = pass;
+		this.role=role;
 	}
 
 	public int getId() {
@@ -32,6 +34,14 @@ public class User
 
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+
+	public USER_ROLE getRole() {
+		return role;
+	}
+
+	public void setRole(USER_ROLE role) {
+		this.role = role;
 	}
 
 }
